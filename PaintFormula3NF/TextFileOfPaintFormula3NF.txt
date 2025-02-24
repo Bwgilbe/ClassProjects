@@ -1,0 +1,110 @@
+
+MariaDB [bwgilbe1]> source PaintFormulas3NF(1).sql;
+
++---------------+--------------+------+------+----------+
+| ColorName     | ColorantCode | Oz   | Shot | HalfShot |
++---------------+--------------+------+------+----------+
+| TangierIsland | AXX          |    3 |    6 |        0 |
+| TangierIsland | B            |    0 |   18 |        0 |
+| TangierIsland | F            |    0 |   10 |        0 |
+| BarnRed       | AXX          |    0 |   20 |        0 |
+| BarnRed       | B            |    0 |   20 |        0 |
+| BarnRed       | F            |    0 |   40 |        0 |
+| BarnRed       | KX           |    0 |   16 |        0 |
+| BarnRed       | V            |    0 |   12 |        0 |
+| NavajoRed     | I            |    2 |   41 |        1 |
+| NavajoRed     | KX           |    0 |   47 |        0 |
+| NavajoRed     | R            |    5 |   47 |        1 |
+| NavajoRed     | T            |    2 |    8 |        1 |
+| DustyMauve    | B            |    0 |   19 |        1 |
+| DustyMauve    | T            |    0 |   30 |        0 |
+| DustyMauve    | V            |    1 |    8 |        0 |
+| Silver        | E            |    0 |    5 |        1 |
+| Silver        | L            |    0 |   36 |        1 |
+| Silver        | V            |    0 |    5 |        1 |
+| JPastel       | L            |    0 |   16 |        1 |
+| JPastel       | T            |    0 |   34 |        0 |
+| JPastel       | V            |    1 |   38 |        0 |
++---------------+--------------+------+------+----------+
+21 rows in set (0.000 sec)
+
+MariaDB [bwgilbe1]> source GilbertLab4.sql;
++---------------+-------------------------------------------------------------+
+| ColorName     | Colorants                                                   |
++---------------+-------------------------------------------------------------+
+| BarnRed       | Titanium White,Red Oxide,Organic Yellow,Magenta,Black Oxide |
+| DustyMauve    | Medium Yellow,Magenta,Black Oxide                           |
+| JPastel       | Raw_Umber,Medium Yellow,Magenta                             |
+| NavajoRed     | Titanium White,Organic Red,Medium Yellow,Brown Oxide        |
+| Silver        | Raw_Umber,Phalo Blue,Magenta                                |
+| TangierIsland | Red Oxide,Organic Yellow,Black Oxide                        |
++---------------+-------------------------------------------------------------+
+6 rows in set (0.001 sec)
+
++----------------+----------------+
+| ColorantName   | Colorant_Count |
++----------------+----------------+
+| Black Oxide    |              3 |
+| Brown Oxide    |              1 |
+| Magenta        |              4 |
+| Medium Yellow  |              3 |
+| Organic Red    |              1 |
+| Organic Yellow |              2 |
+| Phalo Blue     |              1 |
+| Raw_Umber      |              2 |
+| Red Oxide      |              2 |
+| Titanium White |              2 |
++----------------+----------------+
+10 rows in set (0.000 sec)
+
++--------------+
+| ColorantName |
++--------------+
+| Black Oxide  |
+| Brown Oxide  |
+| Red Oxide    |
+| Yellow Oxide |
++--------------+
+4 rows in set (0.000 sec)
+
++-----------+
+| ColorName |
++-----------+
+| BarnRed   |
+| Silver    |
++-----------+
+2 rows in set (0.000 sec)
+
++----------------+--------------+
+| ColorantName   | Total_Ounces |
++----------------+--------------+
+| Black Oxide    |       1.1979 |
+| Brown Oxide    |       2.8646 |
+| Magenta        |       3.3230 |
+| Medium Yellow  |       3.5104 |
+| Organic Red    |       5.9896 |
+| Organic Yellow |       3.5417 |
+| Phalo Blue     |       0.1146 |
+| Raw_Umber      |       1.1041 |
+| Red Oxide      |       1.0416 |
+| Titanium White |       1.3125 |
++----------------+--------------+
+10 rows in set (0.000 sec)
+
++----------------+-----------------------------------+
+| ColorantName   | Paints                            |
++----------------+-----------------------------------+
+| Black Oxide    | BarnRed,DustyMauve,TangierIsland  |
+| Brown Oxide    | NavajoRed                         |
+| Magenta        | BarnRed,DustyMauve,JPastel,Silver |
+| Medium Yellow  | DustyMauve,JPastel,NavajoRed      |
+| Organic Red    | NavajoRed                         |
+| Organic Yellow | BarnRed,TangierIsland             |
+| Phalo Blue     | Silver                            |
+| Raw_Umber      | JPastel,Silver                    |
+| Red Oxide      | BarnRed,TangierIsland             |
+| Titanium White | BarnRed,NavajoRed                 |
++----------------+-----------------------------------+
+10 rows in set (0.000 sec)
+
+MariaDB [bwgilbe1]> notee;
